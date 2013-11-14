@@ -212,7 +212,7 @@ module.exports = function (grunt) {
           ext: '.css'
         }, {
           expand: true,
-          cwd: 'assets/bootstrap/',
+          cwd: 'assets/linker/bootstrap/',
           src: ['bootstrap.less'],
           dest: '.tmp/public/linker/styles/',
           ext: '.css'
