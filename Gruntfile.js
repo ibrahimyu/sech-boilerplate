@@ -133,10 +133,24 @@ module.exports = function (grunt) {
   grunt.loadTasks(depsPath + '/grunt-contrib-cssmin/tasks');
   grunt.loadTasks(depsPath + '/grunt-contrib-less/tasks');
   grunt.loadTasks(depsPath + '/grunt-contrib-coffee/tasks');
+  grunt.loadNpmTasks('grunt-ember-templates');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
 
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
+    emberTemplates: {
+        options: {
+            templateBasePath: 'assets/linker/templates/',
+            precompile: false
+		},
+		compile: {
+			files: {
+				"assets/linker/js/hbs.js": ["assets/linker/templates/*.hbs", "assets/linker/templates/**/*.hbs"]
+			}
+		}
+	},
 
     copy: {
       dev: {
@@ -195,6 +209,12 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'assets/linker/styles/',
           src: ['*.less'],
+          dest: '.tmp/public/linker/styles/',
+          ext: '.css'
+        }, {
+          expand: true,
+          cwd: 'assets/bootstrap/',
+          src: ['bootstrap.less'],
           dest: '.tmp/public/linker/styles/',
           ext: '.css'
         }
@@ -421,6 +441,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('compileAssets', [
     'clean:dev',
+    'emberTemplates',
     'jst:dev',
     'less:dev',
     'copy:dev',    
