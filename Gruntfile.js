@@ -134,7 +134,6 @@ module.exports = function (grunt) {
   grunt.loadTasks(depsPath + '/grunt-contrib-less/tasks');
   grunt.loadTasks(depsPath + '/grunt-contrib-coffee/tasks');
   grunt.loadNpmTasks('grunt-ember-templates');
-  grunt.loadNpmTasks('grunt-contrib-coffee');
 
   // Project configuration.
   grunt.initConfig({
