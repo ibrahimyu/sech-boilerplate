@@ -12,6 +12,7 @@
 ## Usage
 
 ````
+npm install -g sails
 git clone https://github.com/ibrahimyu/sech-boilerplate.git
 cd sech-boilerplate
 npm install
