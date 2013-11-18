@@ -1,0 +1,1 @@
+Ember.TEMPLATES["application"] = Ember.Handlebars.compile("<nav class=\"navbar navbar-default\" role=\"navigation\">\n\t<div class=\"navbar-header\">\n\t\t<a class=\"navbar-brand\" href=\"#\">Brand</a>\n\t</div>\n</nav>");

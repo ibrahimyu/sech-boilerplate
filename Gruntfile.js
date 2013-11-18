@@ -57,6 +57,8 @@ module.exports = function (grunt) {
     'linker/js/app.js',
 
     // *->    put other dependencies here   <-*
+    'linker/js/hbs.js',
+    'linker/js/main.js',
 
     // All of the rest of your app scripts imported here
     'linker/**/*.js'
@@ -228,6 +230,8 @@ module.exports = function (grunt) {
         },
         files: [
           {
+            'assets/linker/js/main.js': ['assets/linker/main/**/*.coffee']
+          }, {
             expand: true,
             cwd: 'assets/js/',
             src: ['**/*.coffee'],
