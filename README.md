@@ -25,3 +25,7 @@ sails lift
 Handlebars templates should be placed in assets/linker/templates.
 CoffeeScripts should be placed in assets/linker/js.
 Bootstrap LESS files are placed in assets/linker/bootstrap.
+
+-----
+
+Credit goes to original authors of Sails.js, Ember.js, and Twitter Bootstrap.
