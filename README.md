@@ -22,9 +22,9 @@ sails lift
 
 ## Locations
 
-Handlebars templates should be placed in assets/linker/templates.
-CoffeeScripts should be placed in assets/linker/js.
-Bootstrap LESS files are placed in assets/linker/bootstrap.
+- Handlebars templates should be placed in ````assets/linker/templates````.
+- CoffeeScripts should be placed in ````assets/linker/main````.
+- Bootstrap LESS files are placed in ````assets/linker/bootstrap````.
 
 -----
 
