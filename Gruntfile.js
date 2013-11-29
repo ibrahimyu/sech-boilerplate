@@ -148,7 +148,10 @@ module.exports = function (grunt) {
 		},
 		compile: {
 			files: {
-				"assets/linker/js/hbs.js": ["assets/linker/templates/*.hbs", "assets/linker/templates/**/*.hbs"]
+				"assets/linker/js/hbs.js": [
+          "assets/linker/templates/*.hbs",
+          "assets/linker/templates/**/*.hbs"
+        ]
 			}
 		}
 	},
@@ -230,7 +233,10 @@ module.exports = function (grunt) {
         },
         files: [
           {
-            'assets/linker/js/main.js': ['assets/linker/main/**/*.coffee']
+            'assets/linker/js/main.js': [
+              'assets/linker/main/*.coffee',
+              'assets/linker/main/**/*.coffee'
+            ]
           }, {
             expand: true,
             cwd: 'assets/js/',
